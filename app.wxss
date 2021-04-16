@@ -1,0 +1,78 @@
+@import "./styles/iconfont.wxss";
+
+/* 微信小程序中不支持通配符'*' */
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 主题颜色 通过变量实现
+1.less中存在变量这个知识
+2.原生的css和wxss也支持变量 */
+page {
+  /* 定义主题颜色 */
+  --themeColor: #eb4450;
+    /* 定义统一的字体大小 假设设计稿大小是375px 
+  1px = 2rpx
+  14px = 28rpx
+   */
+  font-size:28rpx;
+}
+image{
+  width: 100%;
+}
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_2470748_y91nyt0t5n.eot?t=1618370582243'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_2470748_y91nyt0t5n.eot?t=1618370582243#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('//at.alicdn.com/t/font_2470748_y91nyt0t5n.woff?t=1618370582243') format('woff'),
+  url('//at.alicdn.com/t/font_2470748_y91nyt0t5n.ttf?t=1618370582243') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_2470748_y91nyt0t5n.svg?t=1618370582243#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuche:before {
+  content: "\e602";
+}
+
+.icon-fenxiang:before {
+  content: "\e617";
+}
+
+.icon-kefu:before {
+  content: "\e601";
+}
+
+.icon-shoucang:before {
+  content: "\e63c";
+}
+
+.icon-icon-noimage:before {
+  content: "\e600";
+}
+
+.icon-leimupinleifenleileibie2:before {
+  content: "\e7f8";
+}
+
+.icon-leimupinleifenleileibie:before {
+  content: "\e7f9";
+}
+
+.icon-collection-b:before {
+  content: "\e60d";
+}

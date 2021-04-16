@@ -1,0 +1,3 @@
+<!-- <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">登录</button> -->
+<button wx:if="{{canIUse}}" type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">登录</button>
+<view wx:else>请升级微信版本</view>
