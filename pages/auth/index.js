@@ -16,7 +16,6 @@ Page({
         iv,
         signature
       } = e.detail;
-      console.log(encryptedData);
       //2 获取登录成功后的code值
       const {
         code
